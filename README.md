@@ -1,64 +1,93 @@
-# ContactBook
+# 📒 Contact Agenda
 
-A functional console-based contact book application developed in Python, with data storage in a `.txt` file.
+**Agenda** is a console application developed in **Python** that allows you to manage contacts for both persons and companies.  
+It includes features to add, delete, and display contacts, with persistence in a text file.
 
-## Features
+---
 
-- **Add Contact**: Save new contacts with details such as name, phone number, and email.
-- **View Contacts**: Display all saved contacts in a formatted list.
-- **Search Contact**: Find contacts by name.
-- **Delete Contact**: Remove contacts from the contact book.
-- **Update Contact**: Modify existing contact details.
+## 🚀 Features
+- Add, delete, and view contacts.
+- Support for **Person** and **Company** types.
+- Search contacts by last name, DNI, company name, or CUIT.
+- Show all registered persons.
+- Data persistence in `Data.txt`.
 
-## Installation
+---
 
-### Prerequisites
+## 🛠 Tech Stack
+- **Python 3**
+- Standard libraries: `os`, `datetime`
 
-- Python 3.x
+---
 
-### Steps
+## 📦 Installation
+Clone the repository and navigate to the project folder:
 
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/m4lcom/contactBook.git
-    cd contactBook
-    ```
+```bash
+git clone https://github.com/m4lcom/agenda.git
+cd agenda
+```
 
-2. **Run the application**:
-    ```bash
-    python agenda.py
-    ```
+---
 
-## Usage
+## ▶️ Usage
+Run the main script:
 
-After running the application, follow the on-screen prompts to:
+```bash
+python agenda.py
+```
 
-- **Add Contact**: Enter the details for new contacts.
-- **View Contacts**: List all the contacts saved in the contact book.
-- **Search Contact**: Search for a contact by name.
-- **Delete Contact**: Remove a contact from the contact book.
-- **Update Contact**: Update the details of an existing contact.
+Follow the on‑screen menu to:
 
-## Project Structure
+Add a new person or company.
 
-- `agenda.py`: Main script containing the logic for the contact book application.
-- `contacts.txt`: Text file where contacts are stored.
+Delete an existing contact.
 
-## Contributing
+Search and display contacts.
 
-Contributions are welcome! To contribute:
+Show all persons stored in the agenda.
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/new-feature`).
-3. Make your changes and commit them (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/new-feature`).
-5. Open a Pull Request.
+---
 
-## Contact
+## 🧩 Main Classes
+Agenda Handles the main menu, lists of contacts, and file persistence.
 
-For any questions or feedback, please contact:
+Contact Base class for contacts. Includes methods to add and delete contacts.
 
-- **Name**: malcom foca
-- **Email**: malcom.foca@gmail.com
-- **GitHub**: [/m4lcom](https://github.com/m4lcom)
-- **LinkedIn**: [/malcom-foca](https://linkedin.com/in/malcom-foca)
+Person (Contact) Extends Contact. Stores last name, name, DNI, address, birth date. Includes method dia_nacimiento(fecha) to calculate the day of birth.
+
+Company (Contact) Extends Contact. Stores name, CUIT, address, foundation date. Includes method cuando_nacio(fecha) to show the foundation date.
+
+---
+
+## 🔄 Data Storage
+Contacts are saved in a plain text file Data.txt. Each line contains the contact type and its attributes, separated by commas.
+
+Example:
+
+Código
+Type: Person, Last Name: Perez, Name: Juan, DNI: 12345678, Address: Main Street 123, Birth Date: 1990/05/10
+Type: Company, Name: ACME Corp, CUIT: 30-12345678-9, Address: Evergreen Avenue 742, Foundation Date: 2000/01/01
+
+---
+
+## 🤝 Contributing
+Fork the repo
+
+Create a branch (feature/my-change)
+
+Commit your changes
+
+Open a Pull Request
+
+---
+
+## 📜 License
+MIT License – see LICENSE.
+
+---
+
+## 📬 Contact
+[Email](malcom.foca@gmail.com)
+
+[Linkedin](https://linkedin.com/in/malcom-foca)
